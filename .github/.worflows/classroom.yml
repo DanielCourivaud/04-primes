@@ -1,0 +1,524 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: test-01
+      id: test-01
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-01
+        setup-command: ''
+        command: python test.py
+        input: '1'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-02
+      id: test-02
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-02
+        setup-command: ''
+        command: python test.py
+        input: '2'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-03
+      id: test-03
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-03
+        setup-command: ''
+        command: python test.py
+        input: '3'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-04
+      id: test-04
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-04
+        setup-command: ''
+        command: python test.py
+        input: '4'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-05
+      id: test-05
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-05
+        setup-command: ''
+        command: python test.py
+        input: '5'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-06
+      id: test-06
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-06
+        setup-command: ''
+        command: python test.py
+        input: '6679'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-07
+      id: test-07
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-07
+        setup-command: ''
+        command: python test.py
+        input: '6683'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-08
+      id: test-08
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-08
+        setup-command: ''
+        command: python test.py
+        input: '6689'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-09
+      id: test-09
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-09
+        setup-command: ''
+        command: python test.py
+        input: '6691'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-10
+      id: test-10
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-10
+        setup-command: ''
+        command: python test.py
+        input: '6697'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-11
+      id: test-11
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-11
+        setup-command: ''
+        command: python test.py
+        input: '6701'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-12
+      id: test-12
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-12
+        setup-command: ''
+        command: python test.py
+        input: '6703'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-13
+      id: test-13
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-13
+        setup-command: ''
+        command: python test.py
+        input: '6707'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-14
+      id: test-14
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-14
+        setup-command: ''
+        command: python test.py
+        input: '6709'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-15
+      id: test-15
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-15
+        setup-command: ''
+        command: python test.py
+        input: '6711'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-16
+      id: test-16
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-16
+        setup-command: ''
+        command: python test.py
+        input: '6719'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-17
+      id: test-17
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-17
+        setup-command: ''
+        command: python test.py
+        input: '6723'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-18
+      id: test-18
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-18
+        setup-command: ''
+        command: python test.py
+        input: '6733'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-19
+      id: test-19
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-19
+        setup-command: ''
+        command: python test.py
+        input: '6737'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-20
+      id: test-20
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-20
+        setup-command: ''
+        command: python test.py
+        input: '6743'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-21
+      id: test-21
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-21
+        setup-command: ''
+        command: python test.py
+        input: '6761'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-22
+      id: test-22
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-22
+        setup-command: ''
+        command: python test.py
+        input: '6763'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-23
+      id: test-23
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-23
+        setup-command: ''
+        command: python test.py
+        input: '6767'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-24
+      id: test-24
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-24
+        setup-command: ''
+        command: python test.py
+        input: '6779'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-25
+      id: test-25
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-25
+        setup-command: ''
+        command: python test.py
+        input: '6781'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-26
+      id: test-26
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-26
+        setup-command: ''
+        command: python test.py
+        input: '6787'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-27
+      id: test-27
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-27
+        setup-command: ''
+        command: python test.py
+        input: '6791'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-28
+      id: test-28
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-28
+        setup-command: ''
+        command: python test.py
+        input: '6793'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-29
+      id: test-29
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-29
+        setup-command: ''
+        command: python test.py
+        input: '6697'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-30
+      id: test-30
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-30
+        setup-command: ''
+        command: python test.py
+        input: '6803'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-31
+      id: test-31
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-31
+        setup-command: ''
+        command: python test.py
+        input: '6819'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-32
+      id: test-32
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-32
+        setup-command: ''
+        command: python test.py
+        input: '6823'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-33
+      id: test-33
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-33
+        setup-command: ''
+        command: python test.py
+        input: '6827'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-34
+      id: test-34
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-34
+        setup-command: ''
+        command: python test.py
+        input: '6829'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-35
+      id: test-35
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-35
+        setup-command: ''
+        command: python test.py
+        input: '6831'
+        expected-output: 'False'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: test-36
+      id: test-36
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: test-36
+        setup-command: ''
+        command: python test.py
+        input: '6833'
+        expected-output: 'True'
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TEST-01_RESULTS: ${{steps.test-01.outputs.result}}
+        TEST-02_RESULTS: ${{steps.test-02.outputs.result}}
+        TEST-03_RESULTS: ${{steps.test-03.outputs.result}}
+        TEST-04_RESULTS: ${{steps.test-04.outputs.result}}
+        TEST-05_RESULTS: ${{steps.test-05.outputs.result}}
+        TEST-06_RESULTS: ${{steps.test-06.outputs.result}}
+        TEST-07_RESULTS: ${{steps.test-07.outputs.result}}
+        TEST-08_RESULTS: ${{steps.test-08.outputs.result}}
+        TEST-09_RESULTS: ${{steps.test-09.outputs.result}}
+        TEST-10_RESULTS: ${{steps.test-10.outputs.result}}
+        TEST-11_RESULTS: ${{steps.test-11.outputs.result}}
+        TEST-12_RESULTS: ${{steps.test-12.outputs.result}}
+        TEST-13_RESULTS: ${{steps.test-13.outputs.result}}
+        TEST-14_RESULTS: ${{steps.test-14.outputs.result}}
+        TEST-15_RESULTS: ${{steps.test-15.outputs.result}}
+        TEST-16_RESULTS: ${{steps.test-16.outputs.result}}
+        TEST-17_RESULTS: ${{steps.test-17.outputs.result}}
+        TEST-18_RESULTS: ${{steps.test-18.outputs.result}}
+        TEST-19_RESULTS: ${{steps.test-19.outputs.result}}
+        TEST-20_RESULTS: ${{steps.test-20.outputs.result}}
+        TEST-21_RESULTS: ${{steps.test-21.outputs.result}}
+        TEST-22_RESULTS: ${{steps.test-22.outputs.result}}
+        TEST-23_RESULTS: ${{steps.test-23.outputs.result}}
+        TEST-24_RESULTS: ${{steps.test-24.outputs.result}}
+        TEST-25_RESULTS: ${{steps.test-25.outputs.result}}
+        TEST-26_RESULTS: ${{steps.test-26.outputs.result}}
+        TEST-27_RESULTS: ${{steps.test-27.outputs.result}}
+        TEST-28_RESULTS: ${{steps.test-28.outputs.result}}
+        TEST-29_RESULTS: ${{steps.test-29.outputs.result}}
+        TEST-30_RESULTS: ${{steps.test-30.outputs.result}}
+        TEST-31_RESULTS: ${{steps.test-31.outputs.result}}
+        TEST-32_RESULTS: ${{steps.test-32.outputs.result}}
+        TEST-33_RESULTS: ${{steps.test-33.outputs.result}}
+        TEST-34_RESULTS: ${{steps.test-34.outputs.result}}
+        TEST-35_RESULTS: ${{steps.test-35.outputs.result}}
+        TEST-36_RESULTS: ${{steps.test-36.outputs.result}}
+      with:
+        runners:
+        - test-01
+        - test-02
+        - test-03
+        - test-04
+        - test-05
+        - test-06
+        - test-07
+        - test-08
+        - test-09
+        - test-10
+        - test-11
+        - test-12
+        - test-13
+        - test-14
+        - test-15
+        - test-16
+        - test-17
+        - test-18
+        - test-19
+        - test-20
+        - test-21
+        - test-22
+        - test-23
+        - test-24
+        - test-25
+        - test-26
+        - test-27
+        - test-28
+        - test-29
+        - test-30
+        - test-31
+        - test-32
+        - test-33
+        - test-34
+        - test-35
+        - test-36
